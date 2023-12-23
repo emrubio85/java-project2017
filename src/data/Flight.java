@@ -18,36 +18,20 @@ public class Flight implements Serializable {
 	 */
 	private static final long serialVersionUID = -4984381831014139467L;
 	public static int ID = 0;
-	private int flightID;
-	private String flightName;
-	private Date startTime;
-	private Date arriveTime;
-	private City startCity;
-	private City arriveCity;
-	private int price;
-	private int seatCapacity;
+	public int flightID;
+	public String flightName;
+	public Date startTime;
+	public Date arriveTime;
+	public City startCity;
+	public City arriveCity;
+	public int price;
+	public int seatCapacity;
 	protected FlightStatus flightStatus;
-	private HashMap<Passenger, Integer> passagers;
-	private int distance;
-	private boolean isDaemon;
+	public HashMap<Passenger, Integer> passagers;
+	public int distance;
+	public boolean isDaemon;
 	
-	public Flight(String flightName, Date startTime, Date arriveTime, City startCity, City arriveCity, int price,
-			int seatCapacity, int distance) {
-		passagers = new HashMap<>();
-		this.flightName = flightName;
-		this.startTime = startTime;
-		this.arriveTime = arriveTime;
-		this.startCity = startCity;
-		this.arriveCity = arriveCity;
-		this.price = price;
-		this.seatCapacity = seatCapacity;
-		this.distance = distance;
-		this.flightStatus = FlightStatus.UNPUBLISHED;
-		isDaemon = true;
-		flightID = Flight.ID;
-		ID++;
-	}
-	
+		
 	@Override
 	public String toString() {
 		return String.valueOf(flightID) + "\t" +

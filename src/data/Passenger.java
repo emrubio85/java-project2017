@@ -2,9 +2,10 @@ package data;
 
 import java.util.ArrayList;
 
+
 import exceptions.StatusUnavailableException;
 
-public class Passenger extends User {
+public class Passenger extends User   {
 	
 	/**
 	 * 
@@ -13,18 +14,16 @@ public class Passenger extends User {
 	private String identityID; // XXX this should not be changed?
 	protected ArrayList<Order> orderList;
 
-	public Passenger(String identityID, String realName, String password) {
-		orderList = new ArrayList<>();
-		this.identityID = identityID;
-		this.userName = realName;
-		this.userID = User.ID;
-		User.ID++;
-		passHash = hashPass(password);
-	}
 	
+	public Passenger(String identityID2, String realName, String password) {
+		
+	}
+
 	public String getIdentityID() {
 		return identityID;
 	}
+	
+	
 	
 	public void reserveFlight(Flight flight) throws StatusUnavailableException {
 		if (flight.getPassagers().containsKey(this)) {

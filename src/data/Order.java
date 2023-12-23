@@ -5,7 +5,7 @@ import java.util.Date;
 
 import exceptions.StatusUnavailableException;
 
-public class Order implements Serializable {
+public class Order implements Serializable, Iorder {
 	
 	/**
 	 * 
@@ -142,6 +142,12 @@ public class Order implements Serializable {
 				flight.flightStatus = FlightStatus.AVAILABLE;
 			} 
 		}
+	}
+
+	@Override
+	public void calculatePrice() {
+		// codigo necesario
+		
 	}
 
 }
